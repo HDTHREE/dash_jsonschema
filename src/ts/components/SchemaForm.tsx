@@ -1,20 +1,19 @@
-import React from 'react';
-import {DashComponentProps} from '../props';
+import React from "react";
+import {DashComponentProps} from "../props";
+import Form from "@rjsf/core";
+import { RJSFSchema } from "@rjsf/utils";
+import validator from "@rjsf/validator-ajv8";
 
 type Props = {
-    // Insert props
+    schema: RJSFSchema;
 } & DashComponentProps;
 
 /**
  * Component description
  */
-const SchemaForm = (props: Props) => {
-    const { id } = props;
-    return (
-        <div id={id}>
-            {/* Insert code */}
-        </div>
-    )
+const SchemaForm: React.FC<Props> = props => {
+    const { id, schema } = props;
+    return <Form id={id} schema={schema} validator={validator}/>;
 }
 
 SchemaForm.defaultProps = {};

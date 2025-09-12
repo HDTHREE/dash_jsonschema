@@ -11,9 +11,6 @@ from ._imports_ import *
 from ._imports_ import __all__
 
 if not hasattr(_dash, "__plotly_dash") and not hasattr(_dash, "development"):
-    print("Dash was not successfully imported. "
-          "Make sure you don\"t have a file "
-          "named \n"dash.py" in your current directory.", file=_sys.stderr)
     _sys.exit(1)
 
 _basepath: str = _os.path.dirname(__file__)
@@ -28,7 +25,7 @@ _current_path: str = _os.path.dirname(_os.path.abspath(__file__))
 
 _this_module: str = _sys.modules[__name__]
 
-_js_dist: list[dict[str] = [
+_js_dist: list[dict[str]] = [
     {
         "relative_package_path": "dash_jsonschema.js",
         "namespace": package_name
@@ -39,9 +36,9 @@ _js_dist: list[dict[str] = [
         "dynamic": True
     },
     {
-        dev_package_path: "proptypes.js",
-        dev_only: True,
-        namespace: "dash_jsonschema"
+        "dev_package_path": "proptypes.js",
+        "dev_only": True,
+        "namespace": "dash_jsonschema"
     }
 ]
 

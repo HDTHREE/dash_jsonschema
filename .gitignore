@@ -288,6 +288,7 @@ Project.toml
 R/
 dash_jsonschema/SchemaForm.py
 dash_jsonschema/dash_jsonschema.js
+dash_jsonschema/dash_jsonschema.js.LICENSE.txt
 dash_jsonschema/metadata.json
 dash_jsonschema/package-info.json
 dash_jsonschema/proptypes.js
