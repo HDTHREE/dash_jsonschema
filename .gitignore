@@ -278,3 +278,21 @@ GitHub.sublime-settings
 # Julia manifest file names
 Manifest.toml
 JuliaManifest.toml
+
+# NON TEMPLATE ADDITIONS
+package-lock.json
+.Rbuildignore
+DESCRIPTION
+NAMESPACE
+Project.toml
+R/
+dash_jsonschema/SchemaForm.py
+dash_jsonschema/dash_jsonschema.js
+dash_jsonschema/metadata.json
+dash_jsonschema/package-info.json
+dash_jsonschema/proptypes.js
+deps/
+inst/
+man/
+src/DashJsonschema.jl
+src/jl/
