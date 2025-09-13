@@ -9,13 +9,8 @@ type Props = {
 } & DashComponentProps;
 
 /**
- * Component description
+ * SchemaForm is a Dash component that renders a form based on a JSON schema.
  */
-const SchemaForm: React.FC<Props> = props => {
-    const { id, schema } = props;
-    return <Form id={id} schema={schema} validator={validator}/>;
-}
-
-SchemaForm.defaultProps = {};
+const SchemaForm: React.FC<Props> = ({id = undefined, schema = {}}: Props) => <Form id={id} schema={schema} validator={validator}/>;
 
 export default SchemaForm;
