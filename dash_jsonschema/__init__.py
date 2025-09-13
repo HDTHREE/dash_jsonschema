@@ -35,11 +35,11 @@ _js_dist: list[dict[str]] = [
         "namespace": package_name,
         "dynamic": True
     },
-    {
-        "dev_package_path": "proptypes.js",
-        "dev_only": True,
-        "namespace": "dash_jsonschema"
-    }
+    # {
+    #     "dev_package_path": "proptypes.js",
+    #     "dev_only": True,
+    #     "namespace": "dash_jsonschema"
+    # }
 ]
 
 _css_dist = []
