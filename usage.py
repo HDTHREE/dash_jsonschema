@@ -13,7 +13,7 @@ class Person(JsonSchemaMixin):
 app = dash.Dash(__name__)
 
 
-app.layout = dj.SchemaForm(id="component", schema=Person.json_schema())
+app.layout = dj.SchemaForm(id="component", schema=Person.json_schema(), theme="")
 
 
 if __name__ == "__main__":
