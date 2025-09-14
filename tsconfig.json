@@ -5,7 +5,8 @@
     "inlineSources": true,
     "sourceMap": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules"

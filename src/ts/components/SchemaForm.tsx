@@ -9,7 +9,7 @@ import draft6MetaSchema from "ajv/dist/refs/json-schema-draft-06.json";
 validator.ajv.addMetaSchema(draft6MetaSchema);
 
 
-const themes: ReadonlyArray<string> = ["antd", "chakra-ui", "mantine", "mui", "primereact", "react-bootstrap", "semantic-ui", "shadcn"] as const;
+const themes = ["antd", "chakra-ui", "mantine", "mui", "primereact", "react-bootstrap", "semantic-ui", "shadcn"] as const;
 type Theme = typeof themes[number];
 
 
@@ -36,7 +36,7 @@ const getThemedForm: (theme: Theme) => React.ComponentType<FormProps<any, RJSFSc
 /**
  * A form component that generates a form based on a JSON Schema.
  */
-const SchemaForm: React.FC<Props> = ({ id = null, setProps, schema = {}, theme = null }: Props) => {
+const SchemaForm: React.FC<Props> = ({ id = null, setProps = () => {}, schema = {}, theme = null }: Props) => {
     const CurrentForm: React.ComponentType<FormProps<any, RJSFSchema> & ThemeProps> = theme && themes.includes(theme) ? getThemedForm(theme) : Form;
 
     return <CurrentForm id={id} schema={schema} validator={validator} />;
