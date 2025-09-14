@@ -3,7 +3,6 @@ const path = require('path');
 const packagejson = require('./package.json');
 const WebpackDashDynamicImport = require("@plotly/webpack-dash-dynamic-import");
 
-
 const dashLibraryName = packagejson.name.replace(/-/g, '_');
 
 module.exports = function (env, argv) {
