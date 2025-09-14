@@ -49,3 +49,10 @@ for _component in __all__:
     setattr(locals()[_component], "_js_dist", _js_dist)
     setattr(locals()[_component], "_css_dist", _css_dist)
 
+
+try:
+    import jsonschema
+except ImportError:
+    DataclassJsonSchemaForm = None
+else:
+    from .schema_mixin import DataclassJsonSchemaForm

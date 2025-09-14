@@ -286,8 +286,12 @@ DESCRIPTION
 NAMESPACE
 Project.toml
 R/
-dash_jsonschema/
-!dash_jsonschema/__init__.py
+dash_jsonschema/__pycache__/
+dash_jsonschema/_imports.py
+dash_jsonschema/*.js
+dash_jsonschema/*.js.LICENSE.txt
+dash_jsonschema/*.json
+dash_jsonschema/SchemaForm.py
 inst/
 deps/
 man/
