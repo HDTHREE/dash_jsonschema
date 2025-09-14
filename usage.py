@@ -11,9 +11,10 @@ class Person(JsonSchemaMixin):
     age: int
 
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=["https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"])
 
-form = dj.DataclassJsonSchemaForm(schema_dataclass=Person, theme="material-ui-5")
+
+form: dj.SchemaForm = dj.SchemaForm(schema=Person.json_schema())
 app.layout = form
 
 

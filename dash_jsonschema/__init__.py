@@ -35,11 +35,11 @@ _js_dist: list[dict[str]] = [
         "namespace": package_name,
         "dynamic": True
     },
-    # {
-    #     "dev_package_path": "proptypes.js",
-    #     "dev_only": True,
-    #     "namespace": "dash_jsonschema"
-    # }
+    {
+        "dev_package_path": "proptypes.js",
+        "dev_only": True,
+        "namespace": "dash_jsonschema"
+    },
 ]
 
 _css_dist = []
@@ -49,10 +49,3 @@ for _component in __all__:
     setattr(locals()[_component], "_js_dist", _js_dist)
     setattr(locals()[_component], "_css_dist", _css_dist)
 
-
-try:
-    import jsonschema
-except ImportError:
-    DataclassJsonSchemaForm = None
-else:
-    from .schema_mixin import DataclassJsonSchemaForm
