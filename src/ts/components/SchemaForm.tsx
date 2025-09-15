@@ -27,6 +27,10 @@ type Props = {
      */
     theme?: "bootstrap-3" | "antd" | "bootstrap-4" | "material-ui-4" | "material-ui-5" | "semantic-ui" | "fluent-ui-rc";
     /**
+     * The UI schema object to customize the form appearance and behavior.
+     */
+    uiSchema?: object;
+    /**
      * Where to display the error list. If `false`, no error list is displayed.
      */
     showErrorList?: false | "top" | "bottom";
@@ -50,6 +54,7 @@ const SchemaForm = ({
     schema,
     data,
     theme,
+    uiSchema,
     showErrorList,
     liveValidate,
     disabled,
@@ -93,6 +98,7 @@ const SchemaForm = ({
         liveValidate={liveValidate}
         showErrorList={showErrorList}
         disabled={disabled}
+        uiSchema={uiSchema}
     />;
 };
 
